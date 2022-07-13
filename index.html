@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Belajar Desain Web</title>
+        <link rel="stylesheet" href="text.css">
+       <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="new.css">
+        <script  src="java.js"> </script>
+    </head> 
+    <body> 
+    <!--Responsive Navbar-->
+        <div class="myNav" id="myTopNav">
+            <a href="#" class="active"><i class="fa fa-home"></i> Home</a>
+            <a href="#"><i class="fa fa-cog"></i> Service</a>   
+            <a href="#"><i class="fa fa-user"></i> About</a>
+            <a href="tel:+6285261918164"><i class="pp fa fa-phone"></i> Contact</a>
+            <a href="#"><i class="fa fa-image"></i> Gallery</a>
+            <a href="sms:+6285261918164"><i class="fa fa-comment"></i>Feedback</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFun()">
+            <i class="fa fa-bars"></i></a>   
+        </div><br><br>
+        <!-- Logo -->
+               <label class="CRB">Created by:</label>
+               <label class="logo"> <h3> &ensp; &ensp;&ensp; &ensp;&ensp; &ensp; &ensp;&ensp;&nbsp;ZELION SEMBIRING </h3></label><br>
+                <img src="IMG_20220501_233639.JPG?o=1">
+         </a><br><br><br>
+                
+        <!-- Digital Clock -->
+        <script  src="new.js"></script>
+        <div class="clock" id="clock">
+        </div>
+        <script>
+          function showTime() {
+            var date = new Date();
+            var h = date.getHours();
+            var m = date.getMinutes();
+            var s = date.getSeconds();
+            var session = "AM";
+            if (h == 0) {
+                h = 12;
+            }
+            if (h >= 12) {
+                session = "PM";
+            }
+            if (h > 12) {
+                h = h - 12;
+            }
+            m = (m < 10) ? m = "0" + m: m;
+            s = (s < 10) ? s = "0" + s: s;
+            var time = h + ":" + m + ":" + s + " " + session;
+             $('#clock').html(time);
+                setTimeout(showTime, 1000);
+          }
+          showTime();
+        </script>
+<br><br><br><br><br><br><b><br><br><br><br><br><br>
+
+    <!--Loading Animation-->
+        <div class="center">
+            <div class="ring"></div>
+            <span>loading...</span>
+        </div>
+        <br><br><br><br><br><br>  
+        
+    <!-- Battery Percentage -->
+        <main>
+        <div class="battry"></div>
+    </main>
+    <section>
+        <br>
+        <div class="load">
+            <span class="loader"></span>
+        </div>
+    </section>
+        <script>
+            const BattryLevel =    document.querySelector(".battry");  
+navigator.getBattery().then(function (battery) {  
+const level = battery.level;  
+const status = level * 100 + "%";  
+BattryLevel.innerHTML = status; 
+            }); 
+        </script><hr class="hr">
+       <br><br><br><br><br>
+       
+    <!-- Glowing Icon Animation -->
+    <label class="label">Click the icons</label>
+       <ul class="Anim"><a href="https://www.facebook.com/profile.php?id=100074965612030">
+            <li><i class="fab fa-facebook-f"></i></li> </ul>
+<ul class="anim"> <a href="https://youtube.com/channel/UCTfqniBmKFH7jxtomgH7D1A">
+<li><i class="fab fa-youtube"></ul></i></li>
+<ul class="anim"><a href="http://telegram.me/+6285261918164"> <li><i class="fab fa-telegram"></i></li></ul>
+<ul class="anim"><a href="tiktok.zelion"> </a><li><i 
+class="fab fa-tiktok"></i></li> </ul>
+<ul class="anim"><a href="https://instagram.com/niclove1_1?igshid=YmMyMTA2M2Y="><li><i class="fab fa-instagram"></i></li></ul>
+        <hr>
+        <footer>
+        <br>
+            <button class="link"><a href="https://code.sololearn.com/WToanen4bf09/?ref=app"><i class="fa fa-lock"></i> Login</a> </button><br><br>
+                <button class="link"><a href="https://contacts.google.com/"><i class="fa fa-address-book"></i> Registration</a></button><br><br>
+        <button class="Account"><a href="https://instagram.com/niclove1_1?igshid=YmMyMTA2M2Y=">Follow My Account</a></button><br><br>
+        <p class="copy">copyright &copy; Zelion Sm. 2022</p><br>
+        </footer>
+    </body>
+</html>
